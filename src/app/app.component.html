@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div *ngIf="settings">
+  <h1>
+    {{ title }}
+  </h1>
+  <br /><br />
+  <img
+    width="300"
+    alt="Angular Logo"
+    src="https://fiix.software/auth/images/fiix-logo.png"
+  />
+
+  <br /><br /><br />
+
+  <flatfile-button
+    [settings]="settings"
+    [customer]="customer"
+    [licenseKey]="licenseKey"
+    [fieldHooks]="fieldHooks"
+    [(data)]="onData"
+    [(recordInit)]="onRecordInit"
+    [(recordChange)]="onRecordChange"
+    (cancel)="onCancel()"
+  >
+    Import users with email
+  </flatfile-button>
+  <flatfile-button
+    [settings]="settingsForEmailOptional"
+    [customer]="customer"
+    [licenseKey]="licenseKey"
+    [fieldHooks]="fieldHooks"
+    [(data)]="onData"
+    [(recordInit)]="onRecordInit"
+    [(recordChange)]="onRecordChange"
+    (cancel)="onCancel()"
+  >
+    Import email-optional users
+  </flatfile-button>
+  <br />
+  <br />
+  <a href="https://app.flatfile.com/a/32582/imports" target="_blank"
+    >Check your uploads here</a
+  >
+</div>
